@@ -1,0 +1,50 @@
+<app-header />
+
+<main>
+    <ul id="users">
+        <li>
+            <app-user 
+            [id]="user[0].id" 
+            [avatar]="user[0].avatar" 
+            [name]="user[0].name"
+            (pqr)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user 
+            [id]="user[1].id" 
+            [avatar]="user[1].avatar" 
+            [name]="user[1].name" 
+            (pqr)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user 
+            [id]="user[2].id" 
+            [avatar]="user[2].avatar" 
+            [name]="user[2].name" 
+            (pqr)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user 
+            [id]="user[3].id" 
+            [avatar]="user[3].avatar" 
+            [name]="user[3].name" 
+            (pqr)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user 
+            [id]="user[4].id" 
+            [avatar]="user[4].avatar" 
+            [name]="user[4].name" 
+            (pqr)="onSelectUser($event)" />
+        </li>
+        <li>
+            <app-user 
+            [id]="user[5].id" 
+            [avatar]="user[5].avatar" 
+            [name]="user[5].name" 
+            (pqr)="onSelectUser($event)" />
+        </li>
+    </ul>
+
+    <app-tasks [name]="selectedUser ? selectedUser.name : ''" />
+</main>

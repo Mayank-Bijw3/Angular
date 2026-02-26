@@ -1,0 +1,12 @@
+<div>
+    <button>
+        <!-- <img src="assets/users/{{tpUser.avatar}}" alt="{{tpUser.name}}"> -->
+         <!-- <img [src]="'assets/users/' + tpUser.avatar" 
+              [alt]="tpUser.name">  //this is called data binding-->
+
+        <!-- This is not conisder better approach so -->
+        <img [src]="imagePath" [alt]="tpUser.name">
+
+        <span>{{tpUser.name}}</span>
+    </button>
+</div>
