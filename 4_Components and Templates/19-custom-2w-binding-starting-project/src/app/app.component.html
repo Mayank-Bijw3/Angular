@@ -1,0 +1,11 @@
+<div id="inputs">
+  <p>
+    <label>Width</label>
+    <input type="number"  [(ngModel)]="rectSize.width" />
+  </p>
+  <p>
+    <label>Height</label>
+    <input type="number"  [(ngModel)]="rectSize.height" />
+  </p>
+</div>
+<app-rect [(size)] = "rectSize"/>

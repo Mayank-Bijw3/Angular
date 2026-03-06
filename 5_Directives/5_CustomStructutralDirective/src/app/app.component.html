@@ -1,0 +1,23 @@
+<main>
+  <app-learning-resources />
+
+  <hr />
+
+  <app-auth />
+
+  <!-- @if (isAdmin()){
+  <p >Only Admins Should see this!</p>
+  } -->
+
+  <!-- <ng-template appAuth userType="admin">
+  <p >Only Admins Should see this!</p>
+  </ng-template> -->  
+  
+  <!-- or Short hand of ng template -->
+   <p *appAuth="'admin'" class="protected-content admin">Only admins are alow to see it</p>
+                        <!-- Just time pass css to look cool -->
+   <p *appAuth="'user'" class="protected-content unauthenticated">Only regular users are alow to see it</p>
+   
+   <p *appAuth="'guest'" class="protected-content authenticated">Only gest users are alow to see it</p>
+  
+</main>

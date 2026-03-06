@@ -1,0 +1,9 @@
+#rect {
+  background-color: red;
+  border-radius: 2px;
+}
+label{
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+}

@@ -1,0 +1,26 @@
+@if(!results || results.length === 0) {
+    <p class="center">Please enter investment values and press "Calculate" to see results.</p>
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>YEAR</th>
+            <th>Investment Value</th>
+            <th>Interest (Year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (result of results; track $index) {
+            <tr>
+                <td>{{ result.year  }}</td>
+                <td>{{ result.valueEndOfYear | currency:"INR" }}</td>
+                <td>{{ result.interest | currency:"INR" }}</td>
+                <td>{{ result.totalInterest | currency:"INR" }}</td>
+                <td>{{ result.totalAmountInvested | currency:"INR"}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

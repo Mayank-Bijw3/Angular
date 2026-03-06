@@ -1,0 +1,31 @@
+<main>
+  <article class="temperatures">
+    <header>
+      <img src="temp-icon.png" alt="Thermometer icon" />
+      <div>
+        <h2>Current Temperatures</h2>
+        <p>{{ currentDate | date}}</p>
+      </div>
+    </header>
+    <p>New York: {{ currentTemperaturs.newYork  | tempPipe:'fah':'cel' }}</p>
+    <p>Berlin: {{ currentTemperaturs.berlin | number:"1.1-2" }}</p>
+    <p>Paris: {{ currentTemperaturs.paris | number:"1.1-2"| tempPipe:'fah' }}</p>
+                                            <!-- even after chaining no proper ans as in temp pipe the shorted version getting longer -->
+    <p>Chicago: {{ currentTemperaturs.chicago | number:"1.1-2" }}</p>
+  </article>
+
+  <article class="temperatures">
+    <header>
+      <img src="temp-icon.png" alt="Thermometer icon" />
+      <div>
+        <h2>Historic Temperatures</h2>
+        <p>Berlin</p>
+      </div>
+    </header>
+    <ul>
+      @for (temperature of historicTemperatures | sort : 'desc'; track temperature) {
+      <li (click)="onReset($index)">{{ temperature | tempPipe:'cel'}}</li>
+      }
+    </ul>
+  </article>
+</main>

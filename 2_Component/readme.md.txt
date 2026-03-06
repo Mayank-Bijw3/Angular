@@ -1,0 +1,1 @@
+its is all for standalone component = false used in legacy applications
